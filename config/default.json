@@ -1,3 +1,3 @@
 {
-  "mongoURI": "mongodb+srv://seperAdmin:seperpassword@seperdb.q1o8x.mongodb.net/ciseseperDB?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://seperAdmin:seperpassword@seperdb.q1o8x.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 }
