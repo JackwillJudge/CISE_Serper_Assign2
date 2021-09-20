@@ -4,6 +4,9 @@
 
 .btn {
     padding: 8px 20px;
+    border: 1px solid var(--primary);
+    color: #fff;
+    background-color: transparent;
     border-radius: 2px;
     outline: none;
     border: none;
