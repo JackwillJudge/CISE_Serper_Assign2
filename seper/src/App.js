@@ -1,10 +1,10 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import Home from "./components/pages/Home";
-import Submit from "./components/pages/Submit";
-import Search from "./components/pages/Search";
-import AnalystQueue from "./components/pages/AnalystQueue";
-import ModeratorQueue from "./components/pages/ModeratorQueue";
+import Home from "./pages/Home";
+import Submit from "./pages/Submit";
+import Search from "./pages/Search";
+import AnalystQueue from "./pages/AnalystQueue";
+import ModeratorQueue from "./pages/ModeratorQueue";
 import { Route, BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 

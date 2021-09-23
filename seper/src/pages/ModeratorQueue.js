@@ -5,12 +5,10 @@ function ModQueue() {
     <div className="body-container">
       <div className="text-container">
         <h1>SEPER</h1>
-        <p>Softyeahawository</p>
+        <p>fuck yes </p>
       </div>
 
-      <div className="footer">
-        <p>Jack Judge | Mark Lee | Samuel Kumar</p>
-      </div>
+      
     </div>
   );
 }
