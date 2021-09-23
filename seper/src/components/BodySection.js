@@ -10,9 +10,7 @@ function BodySection() {
       </div>
 
       <div className="footer">
-        <div className="authors">
-          <p>Jack Judge | Mark Lee | Samuel Kumar</p>
-        </div>
+        <p>Jack Judge | Mark Lee | Samuel Kumar</p>
       </div>
     </div>
   );

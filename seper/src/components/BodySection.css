@@ -17,6 +17,14 @@
   vertical-align: middle;
 }
 
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
 h1 {
   color: #fff;
   text-align: center;
@@ -30,15 +38,5 @@ p {
   color: #fff;
   text-align: center;
   margin-top: 10px;
-}
-
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-.authors {
-  width: 500px;
-  margin: 0 auto;
+  padding-bottom: 10px;
 }
