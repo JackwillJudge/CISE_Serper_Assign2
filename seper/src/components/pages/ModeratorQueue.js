@@ -1,12 +1,11 @@
 import React from "react";
-import "./BodySection.css";
 
-function BodySection() {
+function ModQueue() {
   return (
     <div className="body-container">
       <div className="text-container">
         <h1>SEPER</h1>
-        <p>Software Enginereering Practices Evidence Repository</p>
+        <p>Softyeahawository</p>
       </div>
 
       <div className="footer">
@@ -16,4 +15,4 @@ function BodySection() {
   );
 }
 
-export default BodySection;
+export default ModQueue;

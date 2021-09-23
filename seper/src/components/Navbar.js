@@ -1,66 +1,59 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-  const [button, setButton] = useState(true);
-
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
-
-  window.addEventListener("resize", showButton);
 
   return (
     <>
       <nav className="navbar">
         <div className="navbar-container">
-          <Link to="/" className="nav-seper">
+          <NavLink to="/Home" className="nav-seper">
             <i class="fas fa-burn"></i>
             SEPER
-          </Link>
+          </NavLink>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-iten">
-              <Link to="/login" className="nav-links" onClick={closeMobileMenu}>
+              <NavLink
+                to="/Search"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
                 Search
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-iten">
-              <Link
-                to="/register"
+              <NavLink
+                to="/Submit"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
                 Submit
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-iten">
-              <Link
-                to="/modqueue"
+              <NavLink
+                to="/ModeratorQueue"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
                 Moderator Queue
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-iten">
-              <Link
-                to="/analqueue"
+              <NavLink
+                to="/AnalystQueue"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
                 Analyst Queue
-              </Link>
+              </NavLink>
             </li>
           </ul>
           <button className="nav-button">Login</button>
