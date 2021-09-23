@@ -23,6 +23,7 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="nav-seper">
+            <i class="fas fa-burn"></i>
             SEPER
           </Link>
           <div className="menu-icon" onClick={handleClick}>
@@ -62,8 +63,8 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          {button && <button buttonStyle="btn--outline">Login</button>}
-          {button && <button buttonStyle="btn--outline">Register</button>}
+          <button className="nav-button">Login</button>
+          <button className="nav-button">Register</button>
         </div>
       </nav>
     </>
