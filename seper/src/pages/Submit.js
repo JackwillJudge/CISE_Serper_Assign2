@@ -62,13 +62,13 @@ class CreateArticle extends Component {
                 <input
                   type="text"
                   placeholder="Title of the Article"
+                  required
                   name="title"
                   className="form-control"
                   value={this.state.title}
                   onChange={this.onChange}
                 />
               </div>
-              <br />
 
               <div className="form-group">
                 <input
@@ -136,10 +136,7 @@ class CreateArticle extends Component {
                 />
               </div>
 
-              <input
-                type="submit"
-                className="btn btn-outline-warning btn-block mt-4"
-              />
+              <input type="submit" className="sub-btn" />
             </form>
           </div>
         </div>
