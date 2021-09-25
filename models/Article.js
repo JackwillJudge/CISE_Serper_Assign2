@@ -15,7 +15,7 @@ const ArticleSchema = new mongoose.Schema({
     type: String
   },
   published_year: {
-    type: Year
+    type: String
   },
   doi: {
     type: String
