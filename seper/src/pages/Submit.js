@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import "../App.css";
 import axios from "axios";
 import "./Pages.css";
@@ -9,6 +8,7 @@ class CreateArticle extends Component {
     super();
     this.state = {
       title: "",
+      author: "",
       source: "",
       published_year: "",
       doi: "",
@@ -26,6 +26,7 @@ class CreateArticle extends Component {
 
     const data = {
       title: this.state.title,
+      author: this.state.author,
       source: this.state.source,
       published_year: this.state.published_year,
       doi: this.state.doi,
@@ -34,10 +35,11 @@ class CreateArticle extends Component {
     };
 
     axios
-      .post("http://localhost:8082/api/articles", data)
-      .then((res) => {
+    .post("http://localhost:8082/api/articles", data)
+    .then((res) => {
         this.setState({
           title: "",
+          author: "",
           source: "",
           published_year: "",
           doi: "",
@@ -47,7 +49,7 @@ class CreateArticle extends Component {
         this.props.history.push("/");
       })
       .catch((err) => {
-        console.log("Error in CreateArticle!");
+        console.log("Error in Create Article!");
       });
   };
 
@@ -129,7 +131,7 @@ class CreateArticle extends Component {
                 <input
                   type="text"
                   placeholder="Evidence Level of Article"
-                  name="evidence_leve"
+                  name="evidence_level"
                   className="form-control"
                   value={this.state.evidence_level}
                   onChange={this.onChange}
