@@ -129,7 +129,7 @@ class CreateArticle extends Component {
                 <input
                   type="text"
                   placeholder="Evidence Level of Article"
-                  name="evedence_level"
+                  name="evidence_leve"
                   className="form-control"
                   value={this.state.evidence_level}
                   onChange={this.onChange}
