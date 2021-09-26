@@ -139,6 +139,8 @@ class CreateArticle extends Component {
               </div>
 
               <input type="submit" className="sub-btn" />
+              
+
             </form>
           </div>
         </div>

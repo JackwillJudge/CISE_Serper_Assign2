@@ -6,6 +6,7 @@ function Home() {
     <div className="body-container">
       <div className="text-container">
         <h1 className="home-title">SEPER</h1>
+        
         <p>Software Enginereering Practices Evidence Repository</p>
       </div>
 
