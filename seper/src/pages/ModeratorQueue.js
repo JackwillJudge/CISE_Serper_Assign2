@@ -11,7 +11,8 @@ function ModeratorQueue() {
       <div className="text-container">
         <h2>Moderator Queue</h2>
         <p>
-          Please accept acticles which are relevant to the SEPER application
+          From the Moderator Queue please approve acticles which are relevant to
+          the SEPER application
         </p>
         <div className="table-form">
           <Styles>

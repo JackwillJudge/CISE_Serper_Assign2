@@ -1,3 +1,5 @@
+import OnClick from "../components/OnClick";
+
 const modcolumns = [
   {
     Header: "ID",
@@ -36,7 +38,14 @@ const modcolumns = [
     Cell: (cellObj) => (
       <div>
         {cellObj.value}
-        <button className="nav-button">Approve</button>
+        <button
+          className="nav-button"
+          onClick={() =>
+            OnClick.handleClickApproveRow(cellObj.row.index, cellObj.value)
+          }
+        >
+          Approve
+        </button>
       </div>
     ),
   },
@@ -45,7 +54,14 @@ const modcolumns = [
     Cell: (cellObj) => (
       <div>
         {cellObj.value}
-        <button className="nav-button">Reject</button>
+        <button
+          className="nav-button"
+          onClick={() =>
+            OnClick.handleClickRejectRow(cellObj.row.index, cellObj.value)
+          }
+        >
+          Reject
+        </button>
       </div>
     ),
   },
