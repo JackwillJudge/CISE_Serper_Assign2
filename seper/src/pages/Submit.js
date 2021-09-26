@@ -130,7 +130,7 @@ class CreateArticle extends Component {
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="Evidence Level of Article"
+                  placeholder="Evidence Level of Article "
                   name="evidence_level"
                   className="form-control"
                   value={this.state.evidence_level}

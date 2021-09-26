@@ -10,7 +10,7 @@ const articles = [
       evidence: "strong support",
     },
   {
-    _id: "2",
+    id: "2",
       title: 'An experimental evaluation of test driven development vs. test-last development with industry professionals',
       authors: "Munir, H., Wnuk, K., Petersen, K., Moayyed, M.",
       source: "EASE",
@@ -20,7 +20,7 @@ const articles = [
       evidence: "weak support",
   },
     {
-      _id: "3",
+      id: "3",
       title: 'Realizing quality improvement through test driven development: results and experiences of four industrial teams',
       authors: "Nagappan, N., Maximilien, E. M., Bhat, T., Williams, L.",
       source: " Empirical Software Engineering, 13(3), 289–302",
@@ -30,7 +30,7 @@ const articles = [
       evidence: "weak support",
     },
     {
-      _id: "4",
+      id: "4",
       title: "Does Test-Driven Development Really Improve Software Design Quality?",
       authors: "Janzen, D. S.",
       source: "Software, IEEE, 25(2) 77-84",
@@ -40,7 +40,7 @@ const articles = [
       evidence: "strong support",
     },
     {
-      _id: "5",
+      id: "5",
       title: "A Comparative Case Study on the Impact of Test-Driven Development on Program Design and Test Coverage",
       authors: "Siniaalto, M., Abrahamsson, P.",
       source: "ArXiv.Org, cs.SE, arXiv:1711.05082-284",
@@ -50,7 +50,7 @@ const articles = [
       evidence: "weak against",
     },
     {
-        _id: "6",
+        id: "6",
         title: "Causal Factors, Benefits and Challenges of Test-Driven Development: Practitioner Perceptions",
         authors: "Buchan, Ji., Li, L. & MacDonell, S. G",
         source: "18TH ASIA PACIFIC SOFTWARE ENGINEERING CONFERENCE 2012",
@@ -60,7 +60,7 @@ const articles = [
         evidence: "weak support",
       },
       {
-        _id: "7",
+        id: "7",
         title: "Causal Factors, Benefits and Challenges of Test-Driven Development: Practitioner Perceptions",
         authors: "Buchan, Ji., Li, L. & MacDonell, S. G",
         source: "18TH ASIA PACIFIC SOFTWARE ENGINEERING CONFERENCE 2012",
@@ -70,7 +70,7 @@ const articles = [
         evidence: "weak support",
       },
       {
-        _id: "8",
+        id: "8",
         title: "Driving Software Quality: How Test-Driven Development Impacts Software Quality.",
         authors: "Crispin, L",
         source: "IEEE Software, 23(6), 70–71.",
@@ -80,7 +80,7 @@ const articles = [
         evidence: "strong support",
       },
       {
-        _id: "9",
+        id: "9",
         title: "On the effectiveness of unit tests in test-driven development.",
         authors: "Kuhrmann, M., O’Connor, R. V., Houston, D., Tosun, A., Ahmed, M., Turhan, B. & Juristo, N.",
         source: "ICSSP, 113–122",
@@ -90,7 +90,7 @@ const articles = [
         evidence: "weak against",
       },
       {
-        _id: "10",
+        id: "10",
         title: "On the effectiveness of unit tests in test-driven development.",
         authors: "Kuhrmann, M., O’Connor, R. V., Houston, D., Tosun, A., Ahmed, M., Turhan, B. & Juristo, N.",
         source: "ICSSP, 113–122",
@@ -100,7 +100,7 @@ const articles = [
         evidence: "weak support",
       },
       {
-        _id: "11",
+        id: "11",
         title: "Test-Driven Development as a Defect-Reduction Practice. ",
         authors: "Williams, L., Maximilien, E. M. & Vouk, M.",
         source: "4th International Symposium on Software Reliability Engineering, 2003. ISSRE 2003, 34–45.",
@@ -110,7 +110,7 @@ const articles = [
         evidence: "strong support",
       },
       {
-        _id: "12",
+        id: "12",
         title: "An Empirical Study of Test-Driven Development vs. Test-Last Development Using Eye Tracking.",
         authors: "Choma, J., Guerra, E. M., Silva, T. S. da, Albuquerque, T., Albuquerque, V. G. & Zaina, L. M.",
         source: "WBMA, 1106(1), 11–24.",

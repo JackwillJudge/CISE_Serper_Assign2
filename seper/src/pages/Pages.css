@@ -44,6 +44,12 @@
   padding-top: 15px;
 }
 
+.table-form {
+  padding-bottom: 10px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
 h1 {
   color: #2979a4;
   text-align: center;
@@ -52,6 +58,15 @@ h1 {
   margin-bottom: 5px;
   letter-spacing: 5px;
 }
+
+h2{ 
+  text-align: center;
+  color: #2979a4;
+  font-size: 3rem;
+  font-weight: 100;
+  letter-spacing: 5px;
+}
+
 
 .home-title {
   color: #2979a4;
