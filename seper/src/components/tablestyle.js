@@ -1,10 +1,10 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const Styles = styled.div `
+const Styles = styled.div`
   table {
-    width: 100%;
+    width: 75%;
     border-spacing: 0;
-    border: 1px solid black;
+    border: none;
     tr {
       :last-child {
         td {
@@ -16,12 +16,11 @@ const Styles = styled.div `
     td {
       margin: 0;
       padding: 1rem;
-      border-bottom: 1px solid black;
-      border-right: 1px solid black;
+      border: none;
       :last-child {
         border-right: 0;
       }
     }
   }
-`
+`;
 export default Styles;

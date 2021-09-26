@@ -34,8 +34,8 @@ class CreateArticle extends Component {
     };
 
     axios
-    .post("http://localhost:8082/api/articles", data)
-    .then((res) => {
+      .post("http://localhost:8082/api/articles", data)
+      .then((res) => {
         this.setState({
           title: "",
           author: "",
@@ -57,6 +57,7 @@ class CreateArticle extends Component {
       <div className="body-container">
         <div className="text-container">
           <h1>Article Submission</h1>
+          <p>Submit a software engineering practice related article</p>
           <div className="submission-form">
             <form noValidate onSubmit={this.onSubmit}>
               <div className="form-group">
@@ -138,8 +139,6 @@ class CreateArticle extends Component {
               </div>
 
               <input type="submit" className="sub-btn" />
-              
-
             </form>
           </div>
         </div>
