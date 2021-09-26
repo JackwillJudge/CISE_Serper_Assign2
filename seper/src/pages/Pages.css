@@ -1,6 +1,6 @@
 .body-container {
   margin: 0 auto;
-  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+  background-color: rgb(26, 23, 23);
   height: 100vh;
   width: 100%;
   display: table;
@@ -46,8 +46,8 @@
 
 .table-form {
   padding-bottom: 10px;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+  background-color: rgb(26, 23, 23);
+  color: #fff;
 }
 
 h1 {
@@ -59,14 +59,13 @@ h1 {
   letter-spacing: 5px;
 }
 
-h2{ 
+h2 {
   text-align: center;
   color: #2979a4;
   font-size: 3rem;
   font-weight: 100;
   letter-spacing: 5px;
 }
-
 
 .home-title {
   color: #2979a4;
