@@ -9,7 +9,7 @@ const tablecolumns = [
   },
   {
     Header: "Authors",
-    accessor: "authors",
+    accessor: "author",
   },
   {
     Header: "Source",
@@ -17,7 +17,7 @@ const tablecolumns = [
   },
   {
     Header: "Pub. Year",
-    accessor: "pubyear",
+    accessor: "published_year",
   },
   {
     Header: "DOI",
@@ -29,7 +29,7 @@ const tablecolumns = [
   },
   {
     Header: "Level of Evidence",
-    accessor: "evidence",
+    accessor: "evidence_level",
   },
 ];
 

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "../App.css";
 import axios from "axios";
-import "./Pages.css";
 
 class CreateArticle extends Component {
   constructor() {
@@ -13,7 +12,7 @@ class CreateArticle extends Component {
       published_year: "",
       doi: "",
       claim: "",
-      evidence_level: "",
+      evidence_level: ""
     };
   }
 
@@ -44,7 +43,7 @@ class CreateArticle extends Component {
           published_year: "",
           doi: "",
           claim: "",
-          evidence_level: "",
+          evidence_level: ""
         });
         this.props.history.push("/");
       })
