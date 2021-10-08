@@ -31,6 +31,21 @@
   margin-bottom: 3px;
 }
 
+.form-control-practice {
+  padding: 10px 313px 10px 10px;
+  margin-bottom: 3px;
+}
+
+.form-control-claim {
+  padding: 10px 184px 10px 10px;
+  margin-bottom: 3px;
+}
+
+.form-control-evidence {
+  padding: 10px 261px 10px 10px;
+  margin-bottom: 3px;
+}
+
 .sub-btn {
   padding: 10px 100px 10px 100px;
   margin-top: 20px;

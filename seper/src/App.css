@@ -73,7 +73,6 @@ html {
   color: white;
 }
 
-
 /* ArticleList Styles */
 .list {
   display: grid;
@@ -85,7 +84,7 @@ html {
 
 .card-container {
   width: 250px;
-  border: 1px solid rgba(0,0,.125);
+  border: 1px solid rgba(0, 0, 0.125);
   margin: 0 auto;
   border-radius: 5px;
   overflow: hidden;
@@ -101,7 +100,8 @@ html {
   font-weight: 400;
 }
 
-.desc h3, p {
+.desc h3,
+p {
   font-weight: 300;
 }
 
@@ -109,4 +109,8 @@ html {
   color: #1f5a8d;
   font-size: 1em;
   padding: 10px 0 10px 0;
+}
+
+.upload-group {
+  margin-top: 10px;
 }
