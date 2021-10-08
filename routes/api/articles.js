@@ -5,6 +5,7 @@ const router = express.Router();
 
 // Load Article model
 const Article = require("../../models/Article");
+const Approved = require("../../models/Approved");
 
 // @route GET api/articles/test
 // @description tests articles route
@@ -27,6 +28,14 @@ router.get("/", (req, res) => {
 // @access Public
 router.get("/:id", (req, res) => {
   Article.findById(req.params.id)
+    .then((article) => res.json(article))
+    .catch((err) =>
+      res.status(404).json({ noarticlefound: "No article found" })
+    );
+});
+//get approved
+router.get("/:id", (req, res) => {
+  Approved.findById(req.params.id)
     .then((article) => res.json(article))
     .catch((err) =>
       res.status(404).json({ noarticlefound: "No article found" })

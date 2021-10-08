@@ -1,3 +1,4 @@
-const handleClickRejectRow = (rowIndex, columnId) => {};
 
+
+const handleClickRejectRow = (rowIndex, columnId) => {};
 const handleClickApproveRow = (rowIndex, columnId) => {};

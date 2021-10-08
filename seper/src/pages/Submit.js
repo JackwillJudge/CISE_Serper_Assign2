@@ -12,7 +12,8 @@ class CreateArticle extends Component {
       published_year: "",
       doi: "",
       claim: "",
-      evidence_level: ""
+      evidence_level: "",
+      practice: "",
     };
   }
 
@@ -31,6 +32,7 @@ class CreateArticle extends Component {
       doi: this.state.doi,
       claim: this.state.claim,
       evidence_level: this.state.evidence_level,
+      practice: this.practice,
     };
 
     axios
@@ -43,7 +45,8 @@ class CreateArticle extends Component {
           published_year: "",
           doi: "",
           claim: "",
-          evidence_level: ""
+          evidence_level: "",
+          practice: "",
         });
         this.props.history.push("/");
       })
@@ -115,27 +118,58 @@ class CreateArticle extends Component {
                   onChange={this.onChange}
                 />
               </div>
-
-              <div className="form-group">
-                <input
+              <div>
+                <select
                   type="text"
-                  placeholder="Claim of Article"
-                  name="claim"
-                  className="form-control"
-                  value={this.state.claim}
+                  placeholder="Practice"
+                  name="Practice"
+                  className="form-control-practice"
+                  value={this.state.practice}
                   onChange={this.onChange}
-                />
+                >
+                  <option value="TDD">TDD</option>
+                  <option value="BDD">BDD</option>
+                  <option value="ATDD">ATDD</option>
+                </select>
               </div>
 
               <div className="form-group">
-                <input
+                <select
                   type="text"
-                  placeholder="Evidence Level of Article "
-                  name="evidence_level"
-                  className="form-control"
+                  placeholder="Claim of Article"
+                  name="claim"
+                  className="form-control-claim"
+                  value={this.state.claim}
+                  onChange={this.onChange}
+                >
+                  <option value="Improves Quality of Code">
+                    Improves Quality of Code
+                  </option>
+                  <option value="Improves Quality of Product">
+                    Improves Quality of Product
+                  </option>
+                  <option value="Improves Team Confidence">
+                    Improves Team Confidence
+                  </option>
+                </select>
+              </div>
+              <div>
+                <select
+                  type="text"
+                  placeholder="Evidence"
+                  name="evidence-level"
+                  className="form-control-evidence"
                   value={this.state.evidence_level}
                   onChange={this.onChange}
-                />
+                >
+                  <option value="Strong For">Strong For</option>
+                  <option value="Mostly For">Mostly For</option>
+                  <option value="Strong Agaisnt">Strong Agaisnt</option>
+                  <option value="Mixed">Mixed</option>
+                </select>
+              </div>
+              <div className="upload-group">
+                <button className="nav-button">Upload BibTex</button>
               </div>
 
               <input type="submit" className="sub-btn" />
