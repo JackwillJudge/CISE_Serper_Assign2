@@ -25,7 +25,7 @@ app.use(express.json({ extended: false }));
 // use Routes
 app.use("/api/articles", articles);
 
-if(process.env.NODE_ENV === "development") {
+if(process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, '/seper/build')))
 
     app.get('*', (req, res) => {
