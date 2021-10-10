@@ -64,6 +64,15 @@ router.put("/:id", (req, res) => {
     );
 });
 
+//approved
+router.put("/:id", (req, res) => {
+  Approved.findByIdAndUpdate(req.params.id, req.body)
+    .then((article) => res.json({ msg: "Updated successfully" }))
+    .catch((err) =>
+      res.status(400).json({ error: "Unable to update the Database" })
+    );
+});
+
 // @route GET api/articles/:id
 // @description Delete article by id
 // @access Public

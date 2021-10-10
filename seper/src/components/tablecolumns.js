@@ -24,6 +24,10 @@ const tablecolumns = [
     accessor: "doi",
   },
   {
+    Header: "Practice",
+    accessor: "practice",
+  },
+  {
     Header: "Claimed Benefit",
     accessor: "claim",
   },

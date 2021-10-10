@@ -14,16 +14,19 @@ class CreateArticle extends Component {
       claim: "",
       evidence_level: "",
       practice: "",
+      errors: {
+        title: "",
+      },
     };
   }
 
   onChange = (e) => {
+    e.preventDefault();
+
     this.setState({ [e.target.name]: e.target.value });
   };
 
   onSubmit = (e) => {
-    e.preventDefault();
-
     const data = {
       title: this.state.title,
       author: this.state.author,
@@ -45,8 +48,8 @@ class CreateArticle extends Component {
           published_year: "",
           doi: "",
           claim: "",
-          evidence_level: "",
           practice: "",
+          evidence_level: "",
         });
         this.props.history.push("/");
       })
@@ -67,7 +70,7 @@ class CreateArticle extends Component {
                 <input
                   type="text"
                   placeholder="Title of the Article"
-                  required
+                  required="test"
                   name="title"
                   className="form-control"
                   value={this.state.title}
@@ -122,7 +125,7 @@ class CreateArticle extends Component {
                 <select
                   type="text"
                   placeholder="Practice"
-                  name="Practice"
+                  name="practice"
                   className="form-control-practice"
                   value={this.state.practice}
                   onChange={this.onChange}
@@ -157,7 +160,7 @@ class CreateArticle extends Component {
                 <select
                   type="text"
                   placeholder="Evidence"
-                  name="evidence-level"
+                  name="evidence_level"
                   className="form-control-evidence"
                   value={this.state.evidence_level}
                   onChange={this.onChange}

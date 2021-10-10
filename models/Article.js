@@ -23,7 +23,7 @@ const ArticleSchema = new mongoose.Schema({
   claim: {
     type: String,
   },
-  Practice: {
+  practice: {
     type: String,
   },
   evidence_level: {
