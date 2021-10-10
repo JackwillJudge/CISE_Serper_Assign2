@@ -27,35 +27,45 @@ class CreateArticle extends Component {
   };
 
   onSubmit = (e) => {
-    const data = {
-      title: this.state.title,
-      author: this.state.author,
-      source: this.state.source,
-      published_year: this.state.published_year,
-      doi: this.state.doi,
-      claim: this.state.claim,
-      evidence_level: this.state.evidence_level,
-      practice: this.practice,
-    };
+    if (
+      this.state.title === "" ||
+      this.state.author === "" ||
+      this.state.source === "" ||
+      this.state.published_year === "" ||
+      this.state.doi === ""
+    ) {
+      alert("Form is missing information");
+    } else {
+      const data = {
+        title: this.state.title,
+        author: this.state.author,
+        source: this.state.source,
+        published_year: this.state.published_year,
+        doi: this.state.doi,
+        claim: this.state.claim,
+        evidence_level: this.state.evidence_level,
+        practice: this.practice,
+      };
 
-    axios
-      .post("http://localhost:8082/api/articles", data)
-      .then((res) => {
-        this.setState({
-          title: "",
-          author: "",
-          source: "",
-          published_year: "",
-          doi: "",
-          claim: "",
-          practice: "",
-          evidence_level: "",
+      axios
+        .post("http://localhost:8082/api/articles", data)
+        .then((res) => {
+          this.setState({
+            title: "",
+            author: "",
+            source: "",
+            published_year: "",
+            doi: "",
+            claim: "",
+            practice: "",
+            evidence_level: "",
+          });
+          this.props.history.push("/");
+        })
+        .catch((err) => {
+          console.log("Error in Create Article!");
         });
-        this.props.history.push("/");
-      })
-      .catch((err) => {
-        console.log("Error in Create Article!");
-      });
+    }
   };
 
   render() {
