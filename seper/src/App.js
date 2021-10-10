@@ -5,7 +5,7 @@ import Submit from "./pages/Submit";
 import Search from "./pages/Search";
 import AnalystQueue from "./pages/AnalystQueue";
 import ModeratorQueue from "./pages/ModeratorQueue";
-import { Route, BrowserRouter as Router, Redirect } from "react-router-dom";
+import { Route, BrowserRouter as Router } from "react-router-dom";
 import CreateArticle from './components/CreateArticle';
 import ShowArticleDetails from './components/ShowArticleDetails';
 import UpdateArticleInfo from './components/UpdateArticleInfo';
