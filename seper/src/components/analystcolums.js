@@ -42,7 +42,6 @@ const analcolums = [
         <NavLink
           to={`/edit-article/${analcolums.id}`}
           className="nav-iten"
-        
         >
           Edit
         </NavLink>

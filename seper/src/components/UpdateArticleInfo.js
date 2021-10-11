@@ -11,10 +11,12 @@ class UpdateArticleInfo extends Component {
     this.state = {
       title: '',
       source:'',
+      author:'',
       published_year:'',
       doi:'',
       claim:'',
-      evidence_level: ''
+      evidence_level: '',
+      practice:''
     };
   }
 
@@ -31,7 +33,8 @@ class UpdateArticleInfo extends Component {
           published_year: res.data.published_year,
           doi: res.data.doi,
           claim: res.data.claim,
-          evidence_level: res.data.evidence_level
+          evidence_level: res.data.evidence_level,
+          practice: res.data.practice,
         })
       })
       .catch(err => {
@@ -53,7 +56,8 @@ class UpdateArticleInfo extends Component {
       published_year: this.state.published_year,
       doi: this.state.doi,
       claim: this.state.claim,
-      evidence_level: this.state.evidence_level
+      evidence_level: this.state.evidence_level,
+      practice:this.state.practice,
     };
 
     axios
@@ -69,15 +73,10 @@ class UpdateArticleInfo extends Component {
 
   render() {
     return (
-      <div className="UpdateArticleInfo">
-        <div className="container">
+      <div className="body-container">
+        <div className="text-container">
           <div className="row">
-            <div className="col-md-8 m-auto">
-              <br />
-              <Link to="/" className="btn btn-outline-warning float-left">
-                  Show Article List
-              </Link>
-            </div>
+            
             <div className="col-md-8 m-auto">
               <h1 className="display-4 text-center">Edit Article</h1>
               <p className="lead text-center">
@@ -89,7 +88,6 @@ class UpdateArticleInfo extends Component {
           <div className="col-md-8 m-auto">
           <form noValidate onSubmit={this.onSubmit}>
             <div className='form-group'>
-              <label htmlFor="title">Title</label>
               <input
                 type='text'
                 placeholder='Title of the Article'
@@ -99,11 +97,10 @@ class UpdateArticleInfo extends Component {
                 onChange={this.onChange}
               />
             </div>
-            <br />
+            
 
             <div className='form-group'>
-            <label htmlFor="author">Author</label>
-              <input
+            <input
                 type='text'
                 placeholder='Author'
                 name='author'
@@ -114,7 +111,6 @@ class UpdateArticleInfo extends Component {
             </div>
 
             <div className='form-group'>
-            <label htmlFor="source">Source</label>
              <input
                 type='text'
                 placeholder='Source of Article'
@@ -126,7 +122,6 @@ class UpdateArticleInfo extends Component {
             </div>          
 
             <div className='form-group'>
-            <label htmlFor="published_year">Published Year</label>
               <input
                 type='year'
                 placeholder='published_year'
@@ -138,7 +133,6 @@ class UpdateArticleInfo extends Component {
             </div>        
 
             <div className='form-group'>
-            <label htmlFor="doi">DOI</label>
             <input
                     type='text'
                     placeholder='doi of article'
@@ -150,7 +144,6 @@ class UpdateArticleInfo extends Component {
                 </div>
 
                 <div className='form-group'>
-            <label htmlFor="claim">Claim</label>
             <input
                     type='text'
                     placeholder='claim of article'
@@ -162,7 +155,6 @@ class UpdateArticleInfo extends Component {
                 </div>
 
                 <div className='form-group'>
-            <label htmlFor="evidence_level">Evidence Level</label>
             <input
                     type='text'
                     placeholder='evidence level of article'
@@ -172,8 +164,22 @@ class UpdateArticleInfo extends Component {
                     onChange={this.onChange}
                   />
                 </div>
+                <div>
+                <select
+                  type="text"
+                  placeholder="Practice"
+                  name="practice"
+                  className="form-control-practice"
+                  value={this.state.practice}
+                  onChange={this.onChange}
+                >
+                  <option value="TDD">TDD</option>
+                  <option value="BDD">BDD</option>
+                  <option value="ATDD">ATDD</option>
+                </select>
+              </div>
 
-            <button type="submit" className="btn btn-outline-info btn-lg btn-block">Update Article</button>
+                <input type="submit" className="sub-btn" />
             </form>
           </div>
 

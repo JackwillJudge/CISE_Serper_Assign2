@@ -72,7 +72,7 @@ class CreateArticle extends Component {
     return (
       <div className="body-container">
         <div className="text-container">
-          <h1>Article Submission</h1>
+          <h2>Article Submission</h2>
           <p>Submit a software engineering practice related article</p>
           <div className="submission-form">
             <form noValidate onSubmit={this.onSubmit}>
