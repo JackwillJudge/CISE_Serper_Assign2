@@ -5,7 +5,6 @@ const router = express.Router();
 
 // Load Article model
 const Article = require("../../models/Article");
-const Approved = require("../../models/Approved");
 
 // @route GET api/articles/test
 // @description tests articles route

@@ -1,4 +1,10 @@
 import OnClick from "../components/OnClick";
+import React, { Component } from "react";
+
+function handleClickApproveRow(index, props) {
+  console.log(index);
+  console.log();
+}
 
 const modcolumns = [
   {
@@ -41,7 +47,7 @@ const modcolumns = [
         <button
           className="nav-button"
           onClick={() =>
-            OnClick.handleClickApproveRow(cellObj.row.index, cellObj.value)
+            handleClickApproveRow(cellObj.row.index, cellObj.props)
           }
         >
           Approve
@@ -67,4 +73,11 @@ const modcolumns = [
   },
 ];
 
-export default modcolumns;
+class moderatorcolumns extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+}
+
+export { modcolumns, moderatorcolumns };
