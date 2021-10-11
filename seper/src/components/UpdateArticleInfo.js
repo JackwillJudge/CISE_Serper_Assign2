@@ -11,6 +11,7 @@ class UpdateArticleInfo extends Component {
     this.state = {
       title: '',
       source:'',
+      author:'',
       published_year:'',
       doi:'',
       claim:'',
@@ -69,15 +70,10 @@ class UpdateArticleInfo extends Component {
 
   render() {
     return (
-      <div className="UpdateArticleInfo">
-        <div className="container">
+      <div className="body-container">
+        <div className="text-container">
           <div className="row">
-            <div className="col-md-8 m-auto">
-              <br />
-              <Link to="/" className="btn btn-outline-warning float-left">
-                  Show Article List
-              </Link>
-            </div>
+            
             <div className="col-md-8 m-auto">
               <h1 className="display-4 text-center">Edit Article</h1>
               <p className="lead text-center">
@@ -89,7 +85,6 @@ class UpdateArticleInfo extends Component {
           <div className="col-md-8 m-auto">
           <form noValidate onSubmit={this.onSubmit}>
             <div className='form-group'>
-              <label htmlFor="title">Title</label>
               <input
                 type='text'
                 placeholder='Title of the Article'
@@ -102,8 +97,7 @@ class UpdateArticleInfo extends Component {
             <br />
 
             <div className='form-group'>
-            <label htmlFor="author">Author</label>
-              <input
+            <input
                 type='text'
                 placeholder='Author'
                 name='author'
@@ -114,7 +108,6 @@ class UpdateArticleInfo extends Component {
             </div>
 
             <div className='form-group'>
-            <label htmlFor="source">Source</label>
              <input
                 type='text'
                 placeholder='Source of Article'
@@ -126,7 +119,6 @@ class UpdateArticleInfo extends Component {
             </div>          
 
             <div className='form-group'>
-            <label htmlFor="published_year">Published Year</label>
               <input
                 type='year'
                 placeholder='published_year'
@@ -138,7 +130,6 @@ class UpdateArticleInfo extends Component {
             </div>        
 
             <div className='form-group'>
-            <label htmlFor="doi">DOI</label>
             <input
                     type='text'
                     placeholder='doi of article'
@@ -150,7 +141,6 @@ class UpdateArticleInfo extends Component {
                 </div>
 
                 <div className='form-group'>
-            <label htmlFor="claim">Claim</label>
             <input
                     type='text'
                     placeholder='claim of article'
@@ -162,7 +152,6 @@ class UpdateArticleInfo extends Component {
                 </div>
 
                 <div className='form-group'>
-            <label htmlFor="evidence_level">Evidence Level</label>
             <input
                     type='text'
                     placeholder='evidence level of article'
