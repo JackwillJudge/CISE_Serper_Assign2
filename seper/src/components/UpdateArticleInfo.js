@@ -15,7 +15,8 @@ class UpdateArticleInfo extends Component {
       published_year:'',
       doi:'',
       claim:'',
-      evidence_level: ''
+      evidence_level: '',
+      practice:''
     };
   }
 
@@ -32,7 +33,8 @@ class UpdateArticleInfo extends Component {
           published_year: res.data.published_year,
           doi: res.data.doi,
           claim: res.data.claim,
-          evidence_level: res.data.evidence_level
+          evidence_level: res.data.evidence_level,
+          practice: res.data.practice,
         })
       })
       .catch(err => {
@@ -54,7 +56,8 @@ class UpdateArticleInfo extends Component {
       published_year: this.state.published_year,
       doi: this.state.doi,
       claim: this.state.claim,
-      evidence_level: this.state.evidence_level
+      evidence_level: this.state.evidence_level,
+      practice:this.state.practice,
     };
 
     axios
@@ -94,7 +97,7 @@ class UpdateArticleInfo extends Component {
                 onChange={this.onChange}
               />
             </div>
-            <br />
+            
 
             <div className='form-group'>
             <input
@@ -161,8 +164,22 @@ class UpdateArticleInfo extends Component {
                     onChange={this.onChange}
                   />
                 </div>
+                <div>
+                <select
+                  type="text"
+                  placeholder="Practice"
+                  name="practice"
+                  className="form-control-practice"
+                  value={this.state.practice}
+                  onChange={this.onChange}
+                >
+                  <option value="TDD">TDD</option>
+                  <option value="BDD">BDD</option>
+                  <option value="ATDD">ATDD</option>
+                </select>
+              </div>
 
-            <button type="submit" className="btn btn-outline-info btn-lg btn-block">Update Article</button>
+                <input type="submit" className="sub-btn" />
             </form>
           </div>
 
